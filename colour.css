@@ -1,0 +1,58 @@
+h1{
+    color: rgb(253, 253, 253);font-family: 'Cinzel Decorative', cursive; text-align: center; background-color:#0081C9;}
+h2 {
+    color:rgb(254, 254, 254);background-color: black; border-style: double;
+}
+
+h3 {
+    color: rgb(254, 254, 254); background-color:#E11299;text-align:center ; border-style: dotted;border-top-left-radius: 40px;border-bottom-right-radius: 40px;border-top-right-radius:40px;border-bottom-left-radius: 40px;
+
+}
+#form {text-align: center;}
+*{
+    text-align: center; font-style: normal ;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input:focus{
+    background-color: rgb(6, 6, 6); color: white ;border-radius: 5px;
+}
+button{
+   transition:0s ;
+}
+button:hover{
+    background-color: black; color: azure;
+}
+/*a[href="https://youtube.com"]::after{
+      content: "\ ▶";
+      
+
+}*/
+.center{
+    list-style-position: inside;
+}
+body,html{
+    margin: 0%;
+}
+#boxes{
+    width: 310px; height: 250px;background-color:#F1F6F9;color: black;border: 5px solid black; padding: 10px;padding-bottom: 10px;
+}
+#python{
+    width:310px ; height:220px ;text-align:center;
+}
+#java{
+    width:310px ; height:220px ;text-align:center; margin-left: 700px;
+    
+}
+
+#thi{
+    width: 310px; height: 250px;background-color:#F1F6F9;color: black;border: 5px solid rgb(5, 5, 5); padding: 10px;padding-bottom: 10px;margin-left:680px; margin-top:-220px;
+}
+
+#sec{
+    width:310px ; height: 250px;background-color:#F1F6F9;color: black;border: 5px solid green; padding: 10px;padding-bottom: 10px;margin-left: 340px; margin-top:-220px;
+
+}
+#js{
+    width:310px ; height: 250px;text-align:center; margin-top:-310px;margin-left: 350px;
+}
+

@@ -1,0 +1,204 @@
+/* cascade order
+1. priority 1 inline css
+2. priority 2 internal/external css
+3. priority 3 browser default style
+Cascading style sheet
+*/
+
+:root {
+  /* Variable */
+  --myname: blue;
+}
+
+.priority-1 {
+  background-color: red;
+}
+
+/* 
+Simple Selectors
+1. div {}
+2. div,h1,.class-name,#id-name,div.head {}
+3. .class-name
+4. #id-name
+5. div.head-1 - div tag with head-1 class
+
+Combinator Selectors
+1. div .head-1 -- child elements with head-1 class
+2. div > p 
+3. div ~ .dummy
+4 div + p
+
+pseduo class selector
+1. :hover
+2. :active
+3. :focus
+4. :nth-child()
+etc..
+
+pseduo element selector
+1. ::after
+2. ::before
+etc..
+
+Attribute selector
+[attr=attr_value] exact value
+[attr~=attr_value] exact value contain in space separated list 
+[attr|=attr_value] exact value or followed by '-' hyphen
+[attr^=attr_value] start value
+[attr$=attr_value] end value
+[attr*=attr_value] anywhere
+*/
+
+/* div,
+h1 {
+  color: black;
+}
+
+/* class 
+.heading {
+  background-color: aquamarine;
+}
+
+/* Id
+#para-001 {
+  background-color: beige;
+}
+
+/* select div element with class name head-1 
+/* div.head-1 {
+  background-color: blueviolet;
+} 
+
+/* select head-1 class inside div element 
+/* div p {
+  background-color: brown;
+} 
+
+/* only child
+div > p {
+  color: aqua;
+}
+
+div + p {
+  transition: all 0.3s;
+}
+
+div + p:hover {
+  background-color: red;
+  color: aliceblue;
+}
+
+div + p:active {
+  background-color: black;
+  color: white;
+}
+
+input {
+  background-color: red;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus {
+  background-color: black;
+}
+
+p:nth-child(odd) {
+  color: aquamarine;
+}
+
+selector:pseudo-class-selector::pseduo-element-selector
+p:first-child::after {
+  content: "- after";
+  color: red;
+  background-color: black;
+}
+
+p:first-child::before {
+  content: "before -";
+  color: red;
+  background-color: black;
+}
+
+[class*="lass"]::after {
+  content: "\0031";
+}
+
+h1:hover {
+  font-size: 1em;
+  font-weight: lighter;
+} */
+
+/* Units 
+1in - 96px
+1px - 1/96 in -- important
+1em - html document - 20px(1em=20px)
+1rem - root
+vh - viewport height
+vw - viewport width
+%
+*/
+html {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.em li {
+  /* default value */
+  font-size: 1.3em;
+}
+
+.rem li {
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-size: 10vh;
+  position: relative;
+}
+
+/* Position
+1. static - default
+2. relative
+3. absolute
+4. sticky
+5. fixed
+*/
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  border: 2px solid;
+}
+
+h1 {
+  position: sticky;
+  left: 100px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.priority {
+  color: white;
+  background-color: black;
+}
+
+/* CSS functions
+1. var()
+2. calc()
+3. linear-gradient()
+4. min() & max()
+*/
+
+.priority {
+  width: max(100%, 300px) !important;
+}

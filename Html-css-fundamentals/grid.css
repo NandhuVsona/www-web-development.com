@@ -1,0 +1,90 @@
+/* Grid Layout
+Grid
+1. Grid
+2. Grid Container
+3. Grid Item
+
+1. Grid
+display: grid;
+
+2. Grid container
+grid-template-columns
+grid-template-rows
+grid-template-areas
+justify-content
+align-content
+
+3. Grid Item
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+
+grid-column
+grid-row
+
+grid-area
+
+
+*/
+
+body {
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  background-color: aquamarine;
+  padding: 10px;
+  height: 100vh;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 30px 100px 30px;
+  grid-template-areas: "item1 item1 item1" "item2 item3 item3" "item4 item4 item";
+  gap: 5px 10px;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.grid-container > div {
+  background-color: antiquewhite;
+}
+
+.grid-container div:nth-child(1) {
+  /* grid-column-start: 1;
+  grid-column-end: span 3; */
+  /* grid-column: 1 / span 3; */
+  grid-area: item1;
+}
+
+.grid-container div:nth-child(2) {
+  /* grid-row-start: 2;
+  grid-row-end: span 1; */
+  /* grid-row: 2 / span 1; */
+  grid-area: item2;
+}
+
+.grid-container div:nth-child(3) {
+  /* grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 2; */
+  /* grid-row: 2 / span 1;
+  grid-column: 2 / span 2; */
+  grid-area: item3;
+}
+
+.grid-container div:nth-child(4) {
+  /* grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 3; */
+  /* grid-row: 3 / span 1;
+  grid-column: 1 / span 3; */
+  grid-area: item4;
+}
